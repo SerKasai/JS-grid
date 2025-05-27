@@ -33,8 +33,16 @@ for (let i = 0; i < numeri.length; i++) {
   element.append(numero);
 
   gridElement.appendChild(element);
-}
 
-// al click su un quadrato
-// se il numero è pari colorare di verde
-// altrimenti colorare di rosso
+
+  // al click su un quadrato
+  // se il numero è pari colorare di verde
+  // altrimenti colorare di rosso
+  element.addEventListener('click', function () {
+    if (parseInt(this.innerHTML) % 2 === 0) {
+      this.classList.add('even');
+    } else {
+      this.classList.add('odd');
+    }
+  })
+}
